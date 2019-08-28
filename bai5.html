@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Fibonacci Series</title>
+</head>
+<body>
+<p id="demo"></p>
+</body>
+<script>
+    function sumFibs(num) {
+        var sum = 0;
+        var fib = 20;
+
+        while (sum <= num) {
+            var currentFib = fibo(fib);
+            if (currentFib %2 === 1) {
+                sum += currentFib;
+            }
+            fib++;
+        }
+        return sum;
+    }
+
+    function fibo(n) {
+        if (n <= 1) return 1;
+        return fibo(n - 1) + fibo(n - 2);
+    }
+    alert(sumFibs(10))
+
+</script>
+</html>
